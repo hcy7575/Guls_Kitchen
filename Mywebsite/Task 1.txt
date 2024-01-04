@@ -1,0 +1,37 @@
+class AreaCl:
+    def __init__(self):
+        pass
+
+    def calculate_area(self):
+        pass
+
+class Rectangle(AreaCl):
+    def __init__(self, h, w):
+        super().__init__()
+        self.height = h
+        self.width = w
+
+    def calculate_area(self):
+        return self.height * self.width
+
+class Cylinder(AreaCl):
+    def __init__(self, r, h):
+        super().__init__()
+        self.radius = r
+        self.height = h
+
+    def calculate_area(self):
+        return 3.14 * self.radius**2
+
+# Usage Example
+rectangle_height = float(input("Enter the height of the rectangle: "))
+rectangle_width = float(input("Enter the width of the rectangle: "))
+rectangle_obj = Rectangle(rectangle_height, rectangle_width)
+rectangle_area = rectangle_obj.calculate_area()
+print("Area of the rectangle:", rectangle_area)
+
+cylinder_radius = float(input("Enter the radius of the cylinder: "))
+cylinder_height = float(input("Enter the height of the cylinder: "))
+cylinder_obj = Cylinder(cylinder_radius, cylinder_height)
+cylinder_area = cylinder_obj.calculate_area()
+print("Area of the cylinder:", cylinder_area)
